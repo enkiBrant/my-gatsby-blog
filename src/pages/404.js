@@ -1,11 +1,18 @@
 import React from "react";
+import { Box, Heading } from "theme-ui";
 
-const Error = () => {
+export default function NotFound() {
 	return (
-		<div>
-			<h1>Error Page</h1>
-		</div>
+		<>
+			<Heading variant="styles.h1">
+				Page not found!
+				<span role="img" aria-label="crying face">
+					😢
+				</span>
+			</Heading>
+			<Box as="h2" variant="styles.h2">
+				It looks like that page doesn't exist
+			</Box>
+		</>
 	);
-};
-
-export default Error;
+}
