@@ -1,11 +1,32 @@
+const siteMetadata = {
+	title: `My Gatsby Blog`,
+	description: `This is my coding blog.`,
+};
+
 module.exports = {
-	siteMetadata: {
-		title: `My Gatsby Blog`,
-		description: `This is my coding blog.`,
-	},
+	siteMetadata,
 	plugins: [
 		`gatsby-plugin-theme-ui`,
-		`gatsby-plugin-mdx`,
+		`gatsby-plugin-sharp`,
+		{
+			resolve: `gatsby-plugin-mdx`,
+			options: {
+				gatsbyRemarkPlugins: [
+					{
+						resolve: `gatsby-remark-images`,
+						options: {
+							maxWidth: 640,
+						},
+					},
+				],
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				path: `${__dirname}/content`,
+			},
+		},
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
