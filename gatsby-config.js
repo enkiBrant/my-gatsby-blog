@@ -4,6 +4,7 @@ module.exports = {
 		description: `This is my coding blog.`,
 	},
 	plugins: [
+		`gatsby-plugin-theme-ui`,
 		`gatsby-plugin-mdx`,
 		{
 			resolve: `gatsby-source-filesystem`,

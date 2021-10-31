@@ -5,7 +5,7 @@ export default function IndexPage() {
 	const { title, description } = useSiteMetadata();
 	return (
 		<>
-			<h1>title</h1>
+			<h1>{title}</h1>
 			<p>{description}</p>
 		</>
 	);
